@@ -1,0 +1,19 @@
+# Global parameter defaults
+path: /vagrant
+
+@public.test:
+	ssh: blogs-test0.anl.gov
+	path: /var/www-data/blogs/test
+
+@public.prod:
+    ssh: blogs-prod0.anl.gov
+    path: /var/www-data/blogs/prod
+
+@inside.test:
+    ssh: blogs-test0.inside.anl.gov
+    path: /var/www-data/blogs/test
+
+@inside.prod:
+    ssh: blogs-prod0.inside.anl.gov
+    path: /var/www-data/blogs/prod
+

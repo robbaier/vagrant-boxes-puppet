@@ -1,0 +1,9 @@
+forge "https://forgeapi.puppetlabs.com"
+
+mod 'puppetlabs-stdlib'
+mod 'maestrodev-rvm'
+mod 'golja-gnupg'
+mod 'puppetlabs-apache'
+mod 'puppetlabs-mysql'
+mod 'mayflower-php'
+mod 'puppet-nodejs'
