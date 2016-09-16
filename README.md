@@ -63,11 +63,15 @@ If you want to build these boxes yourself, you'll need the following:
 ### Install Packer
 * https://www.packer.io/intro/getting-started/setup.html
 * On a Mac with Homebrew installed:
-`$ brew install packer`
+```
+$ brew install packer
+```
 
 ### Install Bundler
 * http://bundler.io/
-`$ gem install bundler`
+```
+$ gem install bundler
+``
 
 ### Run Build Script(s)
 ```
