@@ -71,7 +71,7 @@ $ brew install packer
 * http://bundler.io/
 ```
 $ gem install bundler
-``
+```
 
 ### Run Build Script(s)
 ```
