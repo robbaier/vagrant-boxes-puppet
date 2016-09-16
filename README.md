@@ -1,4 +1,4 @@
-# CentOS 6.8 LAMP Virtual Machines
+# CentOS 6.8 LAMP Virtual Machines for Vagrant
 
 ## About
 The goal of these Virtual Machines (VMs) is to provide consistent, reliable development environments while also providing additional development tools.
@@ -49,46 +49,9 @@ These VMs include the following:
 In order to run these VMs, you'll need a VM provider for your local computer. These specific VMs are designed to work with VirtualBox from Oracle. You may be able to get them working with other VM providers such as VM Ware or Parallels, but that is outside of the scope of this project.
 
 * VirtualBox Downloads - https://www.virtualbox.org/wiki/Downloads
-
-## Vagrant Plugins
-This project leverages a few Vagrant plugins to make certain tasks easier. You'll need to install these to work with these VMs in Vagrant:
-
-### Vagrant Hostupdater
-* This plugin is used to update the hosts file on both your local machine and inside the VM to make sure custom domain names work properly
-* https://github.com/cogitatio/vagrant-hostsupdater
-* To install, run: vagrant plugin install vagrant-hostsupdater'
-    
-### Vagrant Librarian Puppet
-* This plugin is used to manage module dependencies for Puppet
-* https://github.com/voxpupuli/vagrant-librarian-puppet
-* To install, run: vagrant plugin install vagrant-librarian-puppet
-    
-### Vagrant VBGuest (optional, but recommended)
-* This plugin checks the versions of Guest Additions running both within your local VirtualBox installation and within the VM and updates the version within the VM to match.
-* This helps eliminate problems with differing versions of VirtualBox Guest Additions.
-* https://github.com/dotless-de/vagrant-vbguest
-* To install, run: vagrant plugin install vagrant-vbguest
     
 # Puppet Modules
-The following Puppet modules are used to build this VM:
-
-* puppetlabs-apache - https://github.com/puppetlabs/puppetlabs-apache
-* puppetlabs-mysql - https://github.com/puppetlabs/puppetlabs-mysql
-* mayflower-php - https://github.com/mayflower/puppet-php
-
-# Ruby
-The default system Ruby on CentOS is 1.8.7, which is very old. This version of Ruby is no longer supported by many gems. For this VM, this version of Ruby is still in place as the system Ruby to prevent things from breaking.
-
-In order to work with current gems such as Sass, Compass and Jekyll, a newer version of Ruby has been installed using RVM and set as the default Ruby. This means the commands for Sass, Compass and Jekyll will work without any extra steps. However, this also means anything requiring the system Ruby will require running this command first:
-
-    rvm use system
-    
-To go back to the newer version of Ruby, use this command, replacing the version number as appropriate:
-
-    rvm use 2.3.1
-
-
-
+Several Puppet modules are used to build these VMs. Refer to the Puppetfile for specifics.
 
 # Prerequisites
 * Ruby
@@ -103,11 +66,6 @@ To go back to the newer version of Ruby, use this command, replacing the version
 * http://bundler.io/
 * $ gem install bundler
 
-# Download Puppet Modules
-* cd puppet
-* bundle install
-* bundle exec librarian-puppet install
-
 # Run Build Script
-* ./build-wordpress.sh
-* ./build-drupal.sh
+* ./build-robbaier-centos-6.8-x86-64-wordpress.sh
+* ./build-robbaier-centos-6.8-x86-64-drupal.sh
