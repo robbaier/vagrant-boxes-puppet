@@ -62,12 +62,15 @@ If you want to build these boxes yourself, you'll need the following:
 
 ### Install Packer
 * https://www.packer.io/intro/getting-started/setup.html
-* On a Mac with Homebrew installed: $ brew install packer
+* On a Mac with Homebrew installed:
+`$ brew install packer`
 
 ### Install Bundler
 * http://bundler.io/
-* $ gem install bundler
+`$ gem install bundler`
 
-### Run Build Script
-* ./build-robbaier-centos-6.8-x86-64-wordpress.sh
-* ./build-robbaier-centos-6.8-x86-64-drupal.sh
+### Run Build Script(s)
+```
+./build-robbaier-centos-6.8-x86-64-wordpress.sh
+./build-robbaier-centos-6.8-x86-64-drupal.sh
+```
