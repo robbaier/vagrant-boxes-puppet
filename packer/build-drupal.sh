@@ -3,6 +3,6 @@
 : ${BUILD_VERSION:="v$(date +'%Y%m%d')"}
 export BUILD_VERSION
 
-rm -i builds/*-${BUILD_VERSION}-drupal.box
-packer build CentOS-6.8.json
-shasum -a 256 builds/*-${BUILD_VERSION}-drupal.box
+rm -i builds/centos-6.8-drupal.box
+packer build centos-6.8-drupal.json
+shasum -a 256 builds/centos-6.8-drupal.box

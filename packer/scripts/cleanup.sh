@@ -1,3 +1,6 @@
+yum -y update
+yum -y clean all
+
 yum -y erase gtk2 libX11 hicolor-icon-theme avahi freetype bitstream-vera-fonts
 yum -y erase kernel-devel kernel-firmware kernel-headers perl gcc
 

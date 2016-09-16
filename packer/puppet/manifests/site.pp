@@ -17,12 +17,6 @@ package { 'vim-enhanced':
   ensure => installed
 }
 
-# Update packages
-#exec { 'update_packages':
-#  command => '/usr/bin/yum clean all; /usr/bin/yum update -y',
-#  require => Package['epel-release']
-#}
-
 # Apache
 class { 'apache': }
 
@@ -111,7 +105,7 @@ gnupg_key { 'rvm-key':
   ensure      => 'present',
   key_id      => 'D39DC0E3',
   user        => 'root',
-  key_server  => 'hkp://pgp.mit.edu:80',
+  key_source  => 'puppet:///modules/custom/mpapis.asc',
   key_type    => public,
 }
 
@@ -154,17 +148,6 @@ rvm_gem {
     ensure  => latest,
     require => Rvm_system_ruby['ruby-2.3.1'];
 
-  # Capistrano
-  # http://capistranorb.com/
-  'ruby-2.3.1/capistrano':
-    ensure  => latest,
-    require => Rvm_system_ruby['ruby-2.3.1'];
-
-  # Capistrano WP-CLI
-  # https://github.com/lavmeiker/capistrano-wpcli
-  'ruby-2.3.1/capistrano-wpcli':
-    ensure  => latest,
-    require => Rvm_system_ruby['ruby-2.3.1'];
 }
 
 # NodeJS
@@ -204,41 +187,3 @@ package { 'browser-sync':
   ensure   => 'present',
   provider => 'npm',
 }
-
-# PhantomJS
-# http://phantomjs.org/
-# exec { 'install_phantomjs':
-#   command => '/usr/bin/npm install -g phantomjs',
-#   require => Package['npm']
-# }
-
-# SlimerJS
-# http://slimerjs.org/
-# exec { 'install_slimerjs':
-#   command => '/usr/bin/npm install -g slimerjs',
-#   require => Package['npm']
-# }
-
-# CasperJS
-# http://casperjs.org
-# exec { 'install_casperjs':
-#   command => '/usr/bin/npm install -g casperjs',
-#   require => Package['npm']
-# }
-
-# Global Bash RC file
-#file_line { 'bashrc_login_info':
-#  path => '/etc/bashrc',
-#  line => 'source /vagrant/build/vagrant/scripts/vagrant-login-default.sh'
-#}
-
-# SSH Config
-#file_line { 'ssh_config':
-#  path  => '/etc/ssh/sshd_config',
-#  line  => 'PermitUserEnvironment yes'
-#}
-
-#exec { 'restart_ssh':
-#  command => '/etc/init.d/sshd restart',
-#  require => File_line['ssh_config']
-#}

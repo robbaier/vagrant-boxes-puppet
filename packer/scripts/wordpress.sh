@@ -11,4 +11,4 @@ echo 'source /home/vagrant/wp-completion.bash' >> /home/vagrant/.bash_profile
 
 # Create WP-CLI config directory for vagrant user
 mkdir /home/vagrant/.wp-cli
-chown vagrant:vagrant .wp-cli
+chown vagrant:vagrant /home/vagrant/.wp-cli

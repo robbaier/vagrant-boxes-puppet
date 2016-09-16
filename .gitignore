@@ -5,4 +5,5 @@
 /packer/puppet/.librarian
 /packer/puppet/.tmp
 /packer/puppet/modules/*
+!/packer/puppet/modules/custom
 /packer-backup
