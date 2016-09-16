@@ -1,6 +1,6 @@
 .idea/
 /packer/packer_cache
-/packer/builds/*
+/packer/builds
 /packer/output-*
 /packer/puppet/.librarian
 /packer/puppet/.tmp
