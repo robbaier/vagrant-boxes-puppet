@@ -75,6 +75,6 @@ $ gem install bundler
 
 ### Run Build Script(s)
 ```
-./build-robbaier-centos-6.8-x86-64-wordpress.sh
-./build-robbaier-centos-6.8-x86-64-drupal.sh
+$ ./build-robbaier-centos-6.8-x86-64-wordpress.sh
+$ ./build-robbaier-centos-6.8-x86-64-drupal.sh
 ```
