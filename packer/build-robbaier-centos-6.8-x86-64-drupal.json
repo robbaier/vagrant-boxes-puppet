@@ -5,10 +5,10 @@
   },
   "builders": [
     {
-      "name": "centos-6.8-x86_64-wordpress",
+      "name": "robbaier-centos-6.8-x86_64-drupal",
       "type": "virtualbox-iso",
       "guest_os_type": "RedHat_64",
-      "iso_url": "http://mirrors.mit.edu/centos/6.8/isos/x86_64/CentOS-6.8-x86_64-minimal.iso",
+      "iso_url": "http://centos.hyve.com/6.8/isos/x86_64/CentOS-6.8-x86_64-minimal.iso",
       "iso_checksum": "0ca12fe5f28c2ceed4f4084b41ff8a0b",
       "iso_checksum_type": "md5",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
@@ -43,54 +43,16 @@
       "type": "shell",
       "scripts": [
         "scripts/base.sh",
-        "scripts/vagrant.sh",
         "scripts/puppet.sh",
+        "scripts/lamp.sh",
+        "scripts/vcs.sh",
+        "scripts/ruby.sh",
+        "scripts/nodejs.sh",
+        "scripts/vagrant.sh",
         "scripts/virtualbox.sh",
-        "scripts/wordpress.sh"
-      ]
-    },
-    {
-      "type": "file",
-      "source": "scripts/custom-paths.sh",
-      "destination": "/etc/profile.d/custom-paths.sh"
-    },
-    {
-      "type": "puppet-masterless",
-      "manifest_file": "puppet/manifests/site.pp",
-      "module_paths": [ "puppet/modules" ],
-      "prevent_sudo": "true"
-    },
-    {
-      "type": "shell",
-      "scripts": [
         "scripts/cleanup.sh",
+        "scripts/info.sh",
         "scripts/zerodisk.sh"
-      ]
-    },
-    {
-      "type": "file",
-      "source": "files/.bashrc",
-      "destination": "/home/vagrant/.bashrc"
-    },
-    {
-      "type": "file",
-      "source": "files/.bash_aliases",
-      "destination": "/home/vagrant/.bash_aliases"
-    },
-    {
-      "type": "file",
-      "source": "files/wordpress.ascii",
-      "destination": "/opt/wordpress.ascii"
-    },
-    {
-      "type": "file",
-      "source": "files/login-wordpress.sh",
-      "destination": "/opt/login-wordpress.sh"
-    },
-    {
-      "type": "shell",
-      "scripts": [
-        "scripts/fix-permissions.sh"
       ]
     }
   ],
