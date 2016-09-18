@@ -1,0 +1,13 @@
+{
+  "name": "robbaier-centos-6.8-x86_64-drupal",
+  "description": "A Drupal LAMP Vagrant box built on CentOS 6.8",
+  "versions": [{
+    "version": "0.1.0",
+    "providers": [{
+      "name": "virtualbox",
+      "url": "file://~/VagrantBoxes/devops_0.1.0.box",
+      "checksum_type": "sha256",
+      "checksum": "ad3bf4c141ad7afe411f7d40d5ca5769e948c7d1e8547588996b4df0fbcddc7a"
+    }]
+  }]
+}

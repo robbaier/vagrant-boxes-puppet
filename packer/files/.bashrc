@@ -87,4 +87,4 @@ export LAMP_ENVIRONMENT=vagrant
 #------------------------------------------------------------------------------
 # Source login script to display useful information
 #------------------------------------------------------------------------------
-source /opt/login-wordpress.sh
+source /opt/login.sh
