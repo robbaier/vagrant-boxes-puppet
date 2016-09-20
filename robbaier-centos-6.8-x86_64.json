@@ -7,7 +7,7 @@
       "name": "virtualbox",
       "url": "file://~/VagrantBoxes/devops_0.1.0.box",
       "checksum_type": "sha256",
-      "checksum": "7718340aa162ddc606c9e44a5d7797465c9542a73380d6bedb60f101841bf47e"
+      "checksum": "f535ec8dfe0dee64c62d69d1813ad3c5ccc07a8c002fc7567c5a10a3a27b4fd9"
     }]
   }]
 }
