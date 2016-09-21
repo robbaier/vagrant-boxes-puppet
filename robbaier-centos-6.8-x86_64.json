@@ -5,7 +5,7 @@
     "version": "0.1.0",
     "providers": [{
       "name": "virtualbox",
-      "url": "file://~/VagrantBoxes/devops_0.1.0.box",
+      "url": "https://github.com/robbaier/vagrant-boxes/releases/download/0.1.0/robbaier-centos-6.8-x86_64.box",
       "checksum_type": "sha256",
       "checksum": "f535ec8dfe0dee64c62d69d1813ad3c5ccc07a8c002fc7567c5a10a3a27b4fd9"
     }]
