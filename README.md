@@ -61,10 +61,11 @@ If you want to build these boxes yourself, you'll need the following:
 * Bundler
 
 ### Install Packer
-* https://www.packer.io/intro/getting-started/setup.html
-* On a Mac with Homebrew installed:
+* https://www.packer.io/downloads.html
+* Packer now comes as a standalone binary. Download it, extract it and put it in somewhere in your path.
+* Check that Packer 0.12.0+ is installed:
 ```
-$ brew install packer
+$ packer version
 ```
 
 ### Install Bundler

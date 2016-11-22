@@ -2,7 +2,7 @@
   "name": "robbaier-centos-6.8-x86_64",
   "description": "A LAMP Vagrant box built on CentOS 6.8",
   "versions": [{
-    "version": "0.1.0",
+    "version": "0.1.1",
     "providers": [{
       "name": "virtualbox",
       "url": "https://github.com/robbaier/vagrant-boxes/releases/download/0.1.0/robbaier-centos-6.8-x86_64.box",
