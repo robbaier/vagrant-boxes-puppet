@@ -92,6 +92,12 @@
       "type": "file",
       "source": "files/drupal.ascii",
       "destination": "/opt/drupal.ascii"
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/ssh.sh"
+      ]
     }
   ],
   "post-processors": [
